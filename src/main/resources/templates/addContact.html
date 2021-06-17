@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Contacts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<h1>My Contacts</h1>
+<h2>Add Contact</h2>
+<a th:href="@{index}" >View Contacts</a>
+<form action="/addContact" method="POST">
+    <div>
+    <label for="firstName" >First Name: </label>
+    <input id="firstName" name="firstName" value="">
+    <label for="lastName">Last Name: </label>
+    <input id="lastName" name="lastName" value="">
+
+    </div>
+    <br/>
+    <div>
+    <label for="phoneNumber">Phone number: </label>
+    <input id="phoneNumber" name="phoneNumber" value="">
+    <label for="email">Email: </label>
+    <input id="email" name="email" value="">
+    </div>
+    <input type="submit" value="Save" action="/index">
+
+
+
+</form>
+
+</body>
+</html>
